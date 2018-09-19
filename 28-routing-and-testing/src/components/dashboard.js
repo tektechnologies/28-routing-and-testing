@@ -18,28 +18,35 @@ export default class Dashboard extends Component{
             return(
                 <ul>
                     {this.state.notes.map(note =>(
-                        <li key={note._id}>{note.title} : ${note.amount}</li>
+                        <li key={note._id}>
+                        {note.title} : ${note.amount}
+                        </li>
                      ))}
                 </ul>
-            )
+            );
         }
         handleAddNote = (note) => {
             console.log('saving note', note);
+
             if(!note.title){
                 this.setState({error: 'title error'});
-                note.createOn = new Date();
+                return;
+            }
                 this.setState(prevState => ({
-                    notes: [...prevState.note, note],
+                    notes: [note, ...prevState.note],
                     error: null,
                 }));
             }
-        }
+        
         render(){
             return(
                 <div>
                     <h1>Dashboard Component</h1>
+                    {this.state.error && <div className='error'>
+                    {this.state.error}</div>}
+
                     <NoteForm handleAddNote={this.handleAddNote} />
-                    {this.renderNoteList()}
+                    {this.renderFlightNotes()}
                 </div>
             )
         }
