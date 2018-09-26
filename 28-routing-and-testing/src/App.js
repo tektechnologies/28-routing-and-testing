@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import './App.css';
+import Dashboard from './components/dashboard';
+import Landing from './components/landing';
+
 
 class App extends Component {
   render() {
@@ -16,8 +19,8 @@ class App extends Component {
         </nav>
         </header>
         <main>
-          <Route exact path="/" component={() => <h1>Home Town</h1>} />
-          <Route exact path="/dashboard" component={() => <h1>Dashboard Town</h1>} />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/dashboard" component={Dashboard} />
         </main>
        
       </div>
