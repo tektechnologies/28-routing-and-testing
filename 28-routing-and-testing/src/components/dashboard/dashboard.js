@@ -3,7 +3,7 @@ import uuid from 'uuid';
 import NoteForm from '../../components/note-create-form/note-create-form';
 
 
-export default class Dashboard extends Component{
+export default class Dashboard extends React.Component{
   constructor(props){
     super(props);
 
