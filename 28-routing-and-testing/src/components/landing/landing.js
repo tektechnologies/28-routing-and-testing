@@ -1,7 +1,9 @@
 //the home page of what site does. 
 import React, { Component } from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
-import '../App.css';
+import '../../App.css';
+
+//import Dashboard from './components/dasboard/dashboard';
 
 export default class Landing extends Component {
   render() {

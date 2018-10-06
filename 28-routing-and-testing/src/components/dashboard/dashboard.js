@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import uuid from 'uuid';
-import NoteForm from '../landing/note-create-form/note-create-form';
+import NoteForm from '../../components/note-create-form/note-create-form';
 
 
 export default class Dashboard extends Component{
@@ -15,7 +15,7 @@ export default class Dashboard extends Component{
       }],
       error: null,
     };
-    // this.renderFeildNotes = this.renderFieldNotes.bind(this);
+    // this.renderFieldNotes = this.renderFieldNotes.bind(this);
   }
     
 
@@ -32,7 +32,7 @@ export default class Dashboard extends Component{
     );
   }
         //check
-        AddNote = (note) => {
+        handleAddNote = (note) => {
           console.log('saving note', note);
 
           if(!note.title){
@@ -62,9 +62,7 @@ export default class Dashboard extends Component{
             <React.Fragment>
           
               <h1>Dashboard Component</h1>
-              {this.state.error && <div className='error'>
-                {this.state.error}</div>}
-                    
+                               
               <NoteForm handleAddNote={this.handleAddNote} />
              
               { this.renderFieldNotes() }

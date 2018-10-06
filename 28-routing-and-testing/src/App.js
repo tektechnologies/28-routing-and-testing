@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import './App.css';
-import Dashboard from './components/dashboard';
-import Landing from './components/landing';
+import Dashboard from './components/dashboard/dashboard';
+import Landing from './components/landing/landing';
 
 
 class App extends Component {

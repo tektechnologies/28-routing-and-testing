@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const defaultState = {
   title: '',
-  note: '',
+  content: '',
 };
 
 export default class NoteForm extends Component{
@@ -34,7 +34,7 @@ export default class NoteForm extends Component{
           <input 
             type='text'
             name='title'
-            placeholder="title"
+            placeholder="Field Note Title"
             value={this.state.title}
             onChange={this.handleChange}
           />
@@ -43,11 +43,11 @@ export default class NoteForm extends Component{
             name='note'
             rows="5"
             cols="50"
-            placeholder="note"
-            value={this.state.note}
+            placeholder="Add your Adventure Here."
+            value={this.state.content}
             onChange={this.handleChange}
           />
-          <button type="submit">Add Notes</button>
+          <button type="submit">Add Field Notes</button>
           {/* <button onClick={this.addEditFee}>Editors Fee(1000)</button> */}
 
         </form>
